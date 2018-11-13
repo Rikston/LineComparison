@@ -1,0 +1,105 @@
+.holst{
+    position: fixed;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    left: 0px;
+    top: 0px;
+    width: calc( 100% + 0px);
+    height: 100%;
+    background: rgba(0, 0, 0, 0.47);
+    z-index: 2;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    perspective-origin: 50% 50%;
+    perspective: 200px;
+    
+    animation: show-feature 1s linear forwards;
+}
+
+.text{
+    transform-origin: 100% 50% 0;
+    font-size: 1.4em;
+    transform: rotateX(30deg);
+    overflow: inherit;
+    width: 50%;
+    height: 100%;
+    
+    color: white;
+    
+}
+
+.ball{
+    height: 100%;
+}
+
+.box-feature-logo{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+}
+
+.feature-logo, .feature-line1, .feature-line2{
+    color: white
+}
+.feature-logo{
+    font-size: 10em;
+}
+
+.box-lines{
+    display: flex;
+    flex-flow: row nowrap;
+    
+    justify-content: space-between;
+    align-items: center;
+    
+    width: 100%;
+    height: auto;
+}
+.feature-line1{
+    font-size: 2em; 
+}
+
+.feature-line2{
+    font-size: 2em; 
+}
+@keyframes show-feature{
+    from{
+        opacity: 0;
+    }
+    
+    to{
+        opacity: 1;
+    }
+}
+
+.button-close-feature{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    
+    cursor: posinter;
+    background: #49a049;
+    color: azure;
+    margin: 20px 0px 0px 0px; 
+    border-radius: 3px;
+    
+    user-select: none;
+    transition: background .2s linear;
+    
+    width: 180px;
+    height: 45px;
+}
+
+.button-close-feature:hover{
+    background: #31a36f;
+}
+
+.button-close-feature:active{
+    background: #063c06;
+}

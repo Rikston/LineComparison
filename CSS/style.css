@@ -1,0 +1,170 @@
+.box-input-fields{    
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    perspective-origin: 50% 50%;
+    perspective: 400px;
+    padding: 5px;
+    width: 100%;
+    height: 100%;
+    background: rgba(65, 72, 69, 0.88);
+    box-sizing: border-box;
+}
+
+.input-field{    
+    box-sizing: border-box;
+    margin: 0px 0px 8px 0px;
+    padding: 5px;
+    outline: none;
+    font-size: 1.5em;
+    
+    width: 100%;
+    height: 45px;
+    border: 0px;
+    border-radius: 2px;
+}
+.input-field::selection{
+    background: none;
+    color: burlywood;
+}
+.panel-buttons{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 3px 0px 8px 0px;
+}
+.button-compare{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+    margin: 0px 5px 0px 0px;
+    
+    width: 800px;
+    height: 45px;
+    
+    background: #3fc73f;
+    border-radius: 2px;
+    
+    font-family: "Intro";
+}
+
+.button-compare:hover{
+    background: #63c163;
+}
+.button-compare:active{
+    background: #20d43c;
+}
+
+.button-clear-log{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    width: 150px;
+    height: 45px;
+    
+    background: #6d2929;
+    border-radius: 3px;
+    
+    font-family: "Intro";
+}
+.button-clear-log:hover{
+    background: #651515
+}
+.button-clear-log:active{
+    background: black;
+    color: white;
+}
+
+.button-compare, .button-clear-log{
+    transition: background .2s linear;
+}
+.result-compare{
+    font-family: "Supermercado One";
+    align-self: flex-start;
+}
+
+.box-result-logs{
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.wrapper{
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+    perspective-origin: center center;
+    perspective:300px;
+}
+
+.result-log{
+    backface-visibility: hidden;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: auto;
+    height: auto;
+    overflow-x: auto;
+    box-sizing: content-box;
+    background: #5c3939;
+    transform-origin: 0% 0% 0px;
+    transform: rotateX(45deg);
+    //transform-origin: center top;
+    animation: showed .5s cubic-bezier(.02, .18, .25, .89) forwards;
+}
+
+.box-item-for-symbol-compare{
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    border: 0px;
+}
+.symbol-compare{
+    box-sizing: border-box;
+    display: block;
+    margin: 0;
+    padding: 5px;
+    width: 25px;
+    font-size: 1em;
+    border: 0px;
+}
+.delimiter-true{
+    width: 25px;
+    height: 5px;
+    background: #18ff18;
+}
+.delimiter-false{
+    width: 25xp;
+    height: 5px;
+    background: red;
+}
+@keyframes showed{
+    from{
+        transform: rotateX(-112deg);
+    }
+    to{
+         transform: rotateX(0deg);
+    }
+}
